@@ -1,0 +1,13 @@
+package com.lavagna.lavagna;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LavagnaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LavagnaApplication.class, args);
+	}
+
+}
