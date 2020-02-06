@@ -22,6 +22,8 @@ public class MainController {
         return "Saved";
     }
 
+    @CrossOrigin
+//    @CrossOrigin(origins = "http://domain2.com", maxAge = 3600)
     @GetMapping(path="/all")
     public @ResponseBody Iterable<User> getAllUsers() {
         // This returns a JSON or XML with the users
