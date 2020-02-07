@@ -24,6 +24,19 @@ public class MainController {
     }
 
     @CrossOrigin
+    @GetMapping(path="/reset") // Map ONLY POST Requests
+    public @ResponseBody String reset (@RequestParam String pwd) {
+        // @ResponseBody means the returned String is the response, not a view name
+        // @RequestParam means it is a parameter from the GET or POST request
+        if(!pwd.equals("pinguino"))
+            return "False";
+        else{
+            userRepository.deleteAll();
+            return "Cancellazione completata";
+        }
+    }
+
+    @CrossOrigin
 //    @CrossOrigin(origins = "http://domain2.com", maxAge = 3600)
     @GetMapping(path="/all")
     public @ResponseBody Iterable<User> getAllUsers() {
