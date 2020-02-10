@@ -29,7 +29,7 @@ public class MainController {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
         if(!pwd.equals("pinguino"))
-            return "False";
+            return "Password errata";
         else{
             userRepository.deleteAll();
             return "Cancellazione completata";

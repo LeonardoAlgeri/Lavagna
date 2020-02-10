@@ -1,25 +1,12 @@
 <html>
 <head>
-<script>
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-function passwd(site)
-{
-	var pass=prompt("Inserire la password per il reset");
-	site=site+pass;
-	document.getElementById('state').innerHTML=httpGet(site);
-}
-</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
 </head>
 <body>
-<center>
-<button onclick="passwd('https://lavagna.herokuapp.com/reset?pwd=')">Resetta i dati</button>
-<p id="state"></p>
-</center>
+    <center>
+        <button onclick="passwd('https://lavagna.herokuapp.com/reset?pwd=')">Resetta i dati</button>
+        <p id="state"></p>
+    </center>
 </body>
 </html>
