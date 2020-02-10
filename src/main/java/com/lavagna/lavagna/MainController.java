@@ -33,7 +33,7 @@ public class MainController {
     public @ResponseBody String reset (@RequestParam String pwd) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
-        if(!pwd.equals("pinguino"))
+        if(!pwd.equals(System.getenv("PASS_RESET")))
             return "Password errata";
         else{
             userRepository.deleteAll();
