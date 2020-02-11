@@ -1,7 +1,5 @@
 package com.lavagna.lavagna;
 
-import org.apache.geode.cache.Cache;
-import org.apache.geode.cache.CacheFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
