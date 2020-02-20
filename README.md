@@ -28,5 +28,5 @@ docker pull leonardoalgeri/lavagna
 docker run --env-file env.list -p 8080:8080 leonardoalgeri/lavagna
 ```
 
-# #Warning
+## Warning
 In caso di problemi con la visualizzazione di emoji sulla lavagna controllare che la codifica del database sia **utf8mb4_0900_ai_ci**
