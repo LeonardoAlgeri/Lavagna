@@ -4,13 +4,13 @@ Frontend: https://gitlab.com/Leonardoalgeri/lavagnafrontend
 Backend: https://github.com/LeonardoAlgeri/Lavagna  
 DockerHub: https://hub.docker.com/r/leonardoalgeri/lavagna
 
-##API
+## API
 Il backend mette a disposizione le seguenti chiamate:
 - **/all** Restituisce tutti gli elementi scritti sulla lavagna
 - **/add** Aggiunge un messaggio alla lavagna (tramite una richiesta POST)
 - **/reset** Resetta la lavagna (API temporanea da migliorare)
 
-##Deploy
+## Deploy
 In fase di deploy è necessario fornire all'applicativo le seguenti varibili d'ambiente:
 - Per il database mysql  
   - **SQL_URL** il link dell'host sql seguito da porta e nome del database. Ad esempio host:port/mydatabase
@@ -19,7 +19,7 @@ In fase di deploy è necessario fornire all'applicativo le seguenti varibili d'a
 - Generiche
   - **PASS_RESET** la password da utilizzare con l'api /reset
   
-##Docker
+## Docker
 È possibile eseguire il seguente programma su docker seguendo questi passi:
 1) Settare un file env.list contentente il valore delle variabili d'ambiente. Trovate un esempio [qui](https://docs.docker.com/engine/reference/commandline/run/)  cercando **env**
 2) Eseguire le seguenti istruzioni
@@ -28,5 +28,5 @@ docker pull leonardoalgeri/lavagna
 docker run --env-file env.list -p 8080:8080 leonardoalgeri/lavagna
 ```
 
-##Warning
+# #Warning
 In caso di problemi con la visualizzazione di emoji sulla lavagna controllare che la codifica del database sia **utf8mb4_0900_ai_ci**
