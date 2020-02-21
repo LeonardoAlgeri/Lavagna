@@ -32,16 +32,30 @@ Una volta che l'applicazione è stata deployata correttamente settare le variabi
 1) Settare un file env.list contentente il valore delle variabili d'ambiente. Trovate un esempio [qui](https://docs.docker.com/engine/reference/commandline/run/)  cercando **env**  
 2) Eseguire le seguenti istruzioni
 
-    ```
-    docker run --env-file env.list -dp 8080:8080 --name lavagna --restart always leonardoalgeri/lavagna
-    ```
+```
+docker run --env-file env.list -dp 8080:8080 --name lavagna --restart always leonardoalgeri/lavagna
+```
 3) Attendere qualche minuto per l'avvio di spring
+  
+Per fermare il container è sufficiente la seguente operazione
+```
+docker stop lavagna
+```
 
-Per fermare il container è sufficente la seguente operazione
-    ```
-    docker stop lavagna
-    ```
+## Update dell'applicazione
+In entrambi i casi l'update va fatto a mano.  
+Per quanto riguarda heroku basta eliminare l'applicazione e deployarla di nuovo [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)  
 
+Per quanto riguarda docker eseguire le seguenti istruzioni  
+```
+docker stop lavagna
+docker rm lavagna
+docker pull leonardoalgeri/lavagna
+```
+Ed eseguire poi di nuovo il container
+```
+docker run --env-file env.list -dp 8080:8080 --name lavagna --restart always leonardoalgeri/lavagna
+```
 
 ## Warning
 In caso di problemi con la visualizzazione di emoji sulla lavagna controllare che la codifica del database sia **utf8mb4_0900_ai_ci**
