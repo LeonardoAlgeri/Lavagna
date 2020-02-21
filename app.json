@@ -1,0 +1,6 @@
+{
+  "name": "Lavagna",
+  "description": "Una semplice lavagna in spring",
+  "repository": "https://github.com/LeonardoAlgeri/Lavagna",
+  "keywords": ["java", "spring", "rest", "sql"]
+}
