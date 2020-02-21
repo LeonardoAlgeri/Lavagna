@@ -18,7 +18,15 @@ In fase di deploy è necessario fornire all'applicativo le seguenti varibili d'a
   - **SQL_PASSWORD** la password del database sql
 - Generiche
   - **PASS_RESET** la password da utilizzare con l'api /reset
-  
+
+## Heroku
+Solo un semplice click  
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)  
+
+Una volta che l'applicazione è stata deployata correttamente settare le variabili d'ambiente qui sopra citate nella sezione **Settings->Config Vars** dell'applicazione heroku. Non è necessario riavviare l'applicazione
+
+
 ## Docker
 È possibile eseguire il seguente programma su docker seguendo questi passi:
 1) Settare un file env.list contentente il valore delle variabili d'ambiente. Trovate un esempio [qui](https://docs.docker.com/engine/reference/commandline/run/)  cercando **env**  
